@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA0488BA2ADF9E5600680273 /* ColumsRadioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0488B92ADF9E5600680273 /* ColumsRadioView.swift */; };
+		FA0488BC2ADFA53300680273 /* BroadcastRadioItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0488BB2ADFA53300680273 /* BroadcastRadioItems.swift */; };
+		FAC8D9132ADE4F8A004FA922 /* RadioItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8D9122ADE4F8A004FA922 /* RadioItems.swift */; };
 		FADD931C2AD528F50036C72C /* AppleMusicSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADD931B2AD528F50036C72C /* AppleMusicSwiftUIApp.swift */; };
 		FADD93202AD528F60036C72C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FADD931F2AD528F60036C72C /* Assets.xcassets */; };
 		FADD93232AD528F60036C72C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FADD93222AD528F60036C72C /* Preview Assets.xcassets */; };
@@ -15,9 +18,14 @@
 		FADD93362AD660D60036C72C /* BottomMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADD93352AD660D60036C72C /* BottomMedia.swift */; };
 		FADD933E2AD677770036C72C /* MediaListItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADD933D2AD677770036C72C /* MediaListItems.swift */; };
 		FADD93402AD7BE370036C72C /* MediaListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADD933F2AD7BE370036C72C /* MediaListCell.swift */; };
+		FAF7385C2ADD0708000A82E7 /* RadioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF7385B2ADD0708000A82E7 /* RadioView.swift */; };
+		FAF738602ADD18E7000A82E7 /* RowsRadioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF7385F2ADD18E7000A82E7 /* RowsRadioView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA0488B92ADF9E5600680273 /* ColumsRadioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumsRadioView.swift; sourceTree = "<group>"; };
+		FA0488BB2ADFA53300680273 /* BroadcastRadioItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcastRadioItems.swift; sourceTree = "<group>"; };
+		FAC8D9122ADE4F8A004FA922 /* RadioItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioItems.swift; sourceTree = "<group>"; };
 		FADD93182AD528F50036C72C /* AppleMusicSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleMusicSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FADD931B2AD528F50036C72C /* AppleMusicSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMusicSwiftUIApp.swift; sourceTree = "<group>"; };
 		FADD931F2AD528F60036C72C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -27,6 +35,8 @@
 		FADD93352AD660D60036C72C /* BottomMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomMedia.swift; sourceTree = "<group>"; };
 		FADD933D2AD677770036C72C /* MediaListItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListItems.swift; sourceTree = "<group>"; };
 		FADD933F2AD7BE370036C72C /* MediaListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListCell.swift; sourceTree = "<group>"; };
+		FAF7385B2ADD0708000A82E7 /* RadioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioView.swift; sourceTree = "<group>"; };
+		FAF7385F2ADD18E7000A82E7 /* RowsRadioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowsRadioView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +113,7 @@
 		FADD932B2AD529ED0036C72C /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				FAF7385A2ADD0699000A82E7 /* RadioView */,
 				FADD93392AD674EF0036C72C /* LibraryView */,
 				FADD93372AD674B40036C72C /* TabBar */,
 			);
@@ -113,6 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				FADD933D2AD677770036C72C /* MediaListItems.swift */,
+				FAC8D9122ADE4F8A004FA922 /* RadioItems.swift */,
+				FA0488BB2ADFA53300680273 /* BroadcastRadioItems.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -143,6 +156,32 @@
 			path = LibraryView;
 			sourceTree = "<group>";
 		};
+		FAF7385A2ADD0699000A82E7 /* RadioView */ = {
+			isa = PBXGroup;
+			children = (
+				FAF7385D2ADD187F000A82E7 /* RowsRadioView */,
+				FAF7385E2ADD18BD000A82E7 /* ColumsRadioView */,
+				FAF7385B2ADD0708000A82E7 /* RadioView.swift */,
+			);
+			path = RadioView;
+			sourceTree = "<group>";
+		};
+		FAF7385D2ADD187F000A82E7 /* RowsRadioView */ = {
+			isa = PBXGroup;
+			children = (
+				FAF7385F2ADD18E7000A82E7 /* RowsRadioView.swift */,
+			);
+			path = RowsRadioView;
+			sourceTree = "<group>";
+		};
+		FAF7385E2ADD18BD000A82E7 /* ColumsRadioView */ = {
+			isa = PBXGroup;
+			children = (
+				FA0488B92ADF9E5600680273 /* ColumsRadioView.swift */,
+			);
+			path = ColumsRadioView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -171,7 +210,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					FADD93172AD528F50036C72C = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -214,9 +253,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FADD93362AD660D60036C72C /* BottomMedia.swift in Sources */,
+				FAF7385C2ADD0708000A82E7 /* RadioView.swift in Sources */,
 				FADD93402AD7BE370036C72C /* MediaListCell.swift in Sources */,
+				FAF738602ADD18E7000A82E7 /* RowsRadioView.swift in Sources */,
 				FADD933E2AD677770036C72C /* MediaListItems.swift in Sources */,
 				FADD932E2AD52A5E0036C72C /* LibraryView.swift in Sources */,
+				FAC8D9132ADE4F8A004FA922 /* RadioItems.swift in Sources */,
+				FA0488BC2ADFA53300680273 /* BroadcastRadioItems.swift in Sources */,
+				FA0488BA2ADF9E5600680273 /* ColumsRadioView.swift in Sources */,
 				FADD931C2AD528F50036C72C /* AppleMusicSwiftUIApp.swift in Sources */,
 				FADD93342AD5A4F80036C72C /* TabBar.swift in Sources */,
 			);
@@ -261,6 +305,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -321,6 +366,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
