@@ -10,6 +10,7 @@ import SwiftUI
 struct BottomMedia: View {
 
     @Environment(\.colorScheme) var colorScheme
+    @State private var isPlaying = false
 
     var body: some View {
         HStack {
@@ -18,17 +19,30 @@ struct BottomMedia: View {
                 .frame(width: 50, height: 50)
                 .cornerRadius(5)
                 .shadow(radius: 8)
-
+            Spacer()
 
             Text("Whatever U Like")
-                .padding()
+                .padding(.trailing)
+                .offset(x: -45)
 
             Button {
-                print("play button pressed")
+                isPlaying.toggle()
+
+                if isPlaying {
+                    print("play button pressed")
+                } else {
+                    print("stop button pressed")
+                }
             } label: {
-                Image(systemName: "play.fill")
-                    .font(.title)
-                    .foregroundColor(colorScheme == .dark ? .white : .black)
+                if isPlaying {
+                    Image(systemName: "stop.fill")
+                        .font(.title)
+                        .foregroundColor(colorScheme == .dark ? .white : .black)
+                } else {
+                    Image(systemName: "play.fill")
+                        .font(.title)
+                        .foregroundColor(colorScheme == .dark ? .white : .black)
+                }
             }
             .padding(.leading)
 
@@ -39,7 +53,7 @@ struct BottomMedia: View {
                     .font(.title)
                     .foregroundColor(.gray)
             }
-            .padding(.leading)
+            .padding([.leading, .trailing])
         }
         .background(Color(.systemBackground))
     }

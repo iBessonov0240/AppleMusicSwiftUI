@@ -16,7 +16,7 @@ struct TabBar: View {
                     Text("Медиатека")
                 }
 
-            Text("Радио")
+            RadioView()
                 .tabItem {
                     Image(systemName: "dot.radiowaves.left.and.right")
                     Text("Радио")
@@ -30,12 +30,11 @@ struct TabBar: View {
         }
         .accentColor(.red)
         .background(Color(.systemBackground))
-
         .overlay {
             VStack {
                 Spacer()
                 BottomMedia()
-                    .padding(.bottom , 60)
+                    .padding(.bottom , 49)
             }
         }
     }
