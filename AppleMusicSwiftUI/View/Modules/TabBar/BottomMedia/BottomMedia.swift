@@ -13,49 +13,56 @@ struct BottomMedia: View {
     @State private var isPlaying = false
 
     var body: some View {
-        HStack {
-            Image("scherzinger")
-                .resizable()
-                .frame(width: 50, height: 50)
-                .cornerRadius(5)
-                .shadow(radius: 8)
-            Spacer()
+        VStack {
+            HStack {
+                Image("scherzinger")
+                    .resizable()
+                    .frame(width: 50, height: 50)
+                    .cornerRadius(5)
+                    .shadow(radius: 8)
+                    .padding([.top, .leading, .trailing],15)
+                Spacer()
 
-            Text("Whatever U Like")
-                .padding(.trailing)
-                .offset(x: -45)
+                Text("Whatever U Like")
+                    .padding([.leading, .trailing, .top])
+                    .offset(x: -45)
 
-            Button {
-                isPlaying.toggle()
+                Button {
+                    isPlaying.toggle()
 
-                if isPlaying {
-                    print("play button pressed")
-                } else {
-                    print("stop button pressed")
+                    if isPlaying {
+                        print("play button pressed")
+                    } else {
+                        print("stop button pressed")
+                    }
+                } label: {
+                    if isPlaying {
+                        Image(systemName: "stop.fill")
+                            .font(.title)
+                            .foregroundColor(colorScheme == .dark ? .white : .black)
+                    } else {
+                        Image(systemName: "play.fill")
+                            .font(.title)
+                            .foregroundColor(colorScheme == .dark ? .white : .black)
+                    }
                 }
-            } label: {
-                if isPlaying {
-                    Image(systemName: "stop.fill")
-                        .font(.title)
-                        .foregroundColor(colorScheme == .dark ? .white : .black)
-                } else {
-                    Image(systemName: "play.fill")
-                        .font(.title)
-                        .foregroundColor(colorScheme == .dark ? .white : .black)
-                }
-            }
-            .padding(.leading)
+                .padding([.leading, .top])
 
-            Button {
-                print("next button pressed")
-            } label: {
-                Image(systemName: "forward.fill")
-                    .font(.title)
-                    .foregroundColor(.gray)
+                Button {
+                    print("next button pressed")
+                } label: {
+                    Image(systemName: "forward.fill")
+                        .font(.title)
+                        .foregroundColor(.gray)
+                }
+                .padding([.leading, .trailing, .top])
             }
-            .padding([.leading, .trailing])
+            .background(Color(.systemBackground))
+
+            Rectangle()
+                .frame(height: 1)
+                .foregroundColor(.gray)
         }
-        .background(Color(.systemBackground))
     }
 }
 
