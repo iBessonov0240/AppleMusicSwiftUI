@@ -53,6 +53,8 @@ struct RadioView: View {
     }
 }
 
-#Preview {
-    RadioView()
+struct RadioView_Previews: PreviewProvider {
+    static var previews: some View {
+        RadioView()
+    }
 }

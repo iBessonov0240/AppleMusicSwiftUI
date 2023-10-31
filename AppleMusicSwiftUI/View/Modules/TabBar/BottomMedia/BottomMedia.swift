@@ -20,11 +20,11 @@ struct BottomMedia: View {
                     .frame(width: 50, height: 50)
                     .cornerRadius(5)
                     .shadow(radius: 8)
-                    .padding([.top, .leading, .trailing],15)
+                    .padding(15)
                 Spacer()
 
                 Text("Whatever U Like")
-                    .padding([.leading, .trailing, .top])
+                    .padding([.leading, .trailing])
                     .offset(x: -45)
 
                 Button {
@@ -46,7 +46,7 @@ struct BottomMedia: View {
                             .foregroundColor(colorScheme == .dark ? .white : .black)
                     }
                 }
-                .padding([.leading, .top])
+                .padding([.leading])
 
                 Button {
                     print("next button pressed")
@@ -55,13 +55,14 @@ struct BottomMedia: View {
                         .font(.title)
                         .foregroundColor(.gray)
                 }
-                .padding([.leading, .trailing, .top])
+                .padding([.leading, .trailing])
             }
             .background(Color(.systemBackground))
 
             Rectangle()
                 .frame(height: 1)
                 .foregroundColor(.gray)
+                .padding(.top, -12)
         }
     }
 }

@@ -40,6 +40,8 @@ struct ColumsRadioView: View {
     }
 }
 
-#Preview {
-    ColumsRadioView(colum: BroadcastRadioItems.items[0])
+struct ColumsRadioView_Previews: PreviewProvider {
+    static var previews: some View {
+        ColumsRadioView(colum: BroadcastRadioItems.items[0])
+    }
 }

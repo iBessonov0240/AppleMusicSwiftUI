@@ -34,7 +34,7 @@ struct TabBar: View {
             VStack {
                 Spacer()
                 BottomMedia()
-                    .padding(.bottom , 49)
+                    .padding(.bottom , 35)
             }
         }
     }

@@ -40,6 +40,8 @@ struct RowsRadioView: View {
     }
 }
 
-#Preview {
-    RowsRadioView(row: RadioItems.items[0])
+struct RowsRadioView_Previews: PreviewProvider {
+    static var previews: some View {
+        RowsRadioView(row: RadioItems.items[0])
+    }
 }
