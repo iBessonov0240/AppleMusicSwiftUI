@@ -29,7 +29,7 @@ struct RowsRadioView: View {
 
             Image(row.image)
                 .resizable()
-                .frame(width: .infinity , height: 200)
+                .frame(width: .infinity , height: 220)
                 .cornerRadius(5)
                 .padding(.bottom)
 

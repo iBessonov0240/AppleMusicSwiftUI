@@ -8,35 +8,77 @@
 import SwiftUI
 
 struct TabBar: View {
+
+    @StateObject private var playerViewModel = PlayerModel()
+    @State private var isSecondMediaViewPresented = false
+    @State private var verticalPosition = 0.0
+    @State private var current = 2
+
     var body: some View {
-        TabView {
-            LibraryView(items: MediaListItems.items)
-                .tabItem {
-                    Image(systemName: "play.square.stack")
-                    Text("Медиатека")
-                }
+        ZStack {
+            TabView(selection: $current) {
+                LibraryView(items: MediaListItems.items)
+                    .tag(0)
+                    .tabItem {
+                        Image(systemName: "play.square.stack")
+                        Text("Медиатека")
+                    }
 
-            RadioView()
-                .tabItem {
-                    Image(systemName: "dot.radiowaves.left.and.right")
-                    Text("Радио")
-                }
+                RadioView()
+                    .tag(1)
+                    .tabItem {
+                        Image(systemName: "dot.radiowaves.left.and.right")
+                        Text("Радио")
+                    }
 
-            Text("Поиск")
-                .tabItem {
-                    Image(systemName: "magnifyingglass")
-                    Text("Поиск")
-                }
-        }
-        .accentColor(.red)
-        .background(Color(.systemBackground))
-        .overlay {
+                SearchView()
+                    .tag(2)
+                    .tabItem {
+                        Image(systemName: "magnifyingglass")
+                        Text("Поиск")
+                    }
+            }
+            .accentColor(.red)
+            .background(Color(.systemBackground))
+
             VStack {
                 Spacer()
-                BottomMedia()
-                    .padding(.bottom , 35)
+
+                Button(action: {
+                    isSecondMediaViewPresented.toggle()
+                }) {
+                    BottomMedia(isPlaying: $playerViewModel.isPlaying)
+                        .foregroundColor(.black)
+                }
+                .fullScreenCover(isPresented: $isSecondMediaViewPresented) {
+                    SecondMediaView(isPlaying: $playerViewModel.isPlaying)
+                        .offset(y: verticalPosition)
+                        .gesture(
+                            gestureVertical()
+                        )
+                        .transition(.slide)
+                }
+                .frame(minHeight: 160)
             }
         }
+    }
+
+    private func gestureVertical() -> some Gesture {
+        return DragGesture()
+            .onChanged { value in
+                if value.translation.height < 0 {
+                    verticalPosition = 0
+                } else {
+                    verticalPosition = value.translation.height
+                }
+
+            }
+            .onEnded { value in
+                withAnimation(.linear(duration: 0.05)) {
+                    isSecondMediaViewPresented.toggle()
+                    verticalPosition = .zero
+                }
+            }
     }
 }
 

@@ -22,6 +22,6 @@ extension BroadcastRadioItems {
         BroadcastRadioItems(image: "bbc5", title: "BBC Radio 5 live", subtitle: "From Tunein"),
         BroadcastRadioItems(image: "bbc2", title: "BBC Radio 2", subtitle: "From Tunein"),
         BroadcastRadioItems(image: "bbc4", title: "BBC Radio 4", subtitle: "From Tunein"),
-        BroadcastRadioItems(image: "jazz", title: "ADC Jazz", subtitle: "From Tunein"),
+        BroadcastRadioItems(image: "jazz", title: "ADC Jazz", subtitle: "From Tunein")
     ]
 }
