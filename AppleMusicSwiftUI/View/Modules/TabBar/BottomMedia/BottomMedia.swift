@@ -10,7 +10,10 @@ import SwiftUI
 struct BottomMedia: View {
 
     @Environment(\.colorScheme) var colorScheme
-    @State private var isPlaying = false
+    @Binding var isPlaying: Bool
+
+    @State private var isSecondMediaViewPresented = false
+    @State private var verticalPosition = 0.0
 
     var body: some View {
         VStack {
@@ -46,7 +49,7 @@ struct BottomMedia: View {
                             .foregroundColor(colorScheme == .dark ? .white : .black)
                     }
                 }
-                .padding([.leading])
+                .padding(.leading)
 
                 Button {
                     print("next button pressed")
@@ -69,6 +72,6 @@ struct BottomMedia: View {
 
 struct BottomMedia_Previews: PreviewProvider {
     static var previews: some View {
-        BottomMedia()
+        BottomMedia(isPlaying: .constant(false))
     }
 }

@@ -10,7 +10,7 @@ import SwiftUI
 struct RadioView: View {
 
     let rows = [
-        GridItem(.fixed(250))
+        GridItem(.fixed(220))
     ]
 
     let colums = [
@@ -26,9 +26,10 @@ struct RadioView: View {
                             RowsRadioView(row: RadioItems.items[index])
                                 .frame(width: 350)
                                 .aspectRatio(contentMode: .fill)
-                                .padding([.leading], 12)
+                                .padding(.leading, 5)
                         }
                     })
+                    .padding([.leading, .trailing], 12)
                 }
                 .padding(.bottom)
 
