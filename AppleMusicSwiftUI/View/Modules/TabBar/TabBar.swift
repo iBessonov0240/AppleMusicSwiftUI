@@ -31,7 +31,7 @@ struct TabBar: View {
                         Text("Радио")
                     }
 
-                SearchUIKitView()
+                SearchView()
                     .tag(2)
                     .tabItem {
                         Image(systemName: "magnifyingglass")
